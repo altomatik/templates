@@ -1,0 +1,20 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "tsc -b tsconfig.json --clean",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "math": "workspace:math"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "Muhammad Ridho",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

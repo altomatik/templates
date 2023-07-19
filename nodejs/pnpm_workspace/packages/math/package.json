@@ -1,0 +1,17 @@
+{
+  "name": "math",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "clean": "tsc -b tsconfig.json --clean",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Muhammad Ridho",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}

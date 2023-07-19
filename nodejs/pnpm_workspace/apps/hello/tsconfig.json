@@ -1,0 +1,11 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"moduleResolution": "NodeNext",
+	},
+	"references": [
+		{
+			"path": "../../packages/math"
+		}
+	]
+}
