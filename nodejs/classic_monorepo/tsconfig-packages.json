@@ -1,0 +1,14 @@
+{
+	"files": [],
+	"references": [
+		{
+			"path": "./pkgs/common"
+		},
+		{
+			"path": "./pkgs/web"
+		},
+		{
+			"path": "./pkgs/api"
+		}
+	]
+}

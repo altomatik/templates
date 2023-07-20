@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true,
+		"paths": {
+			"common": ["pkgs/common/src"],
+			"web": ["pkgs/web/src"],
+			"api": ["pkgs/api/src"]
+		}
+	}
+}
