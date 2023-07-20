@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Muhammad Ridho",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.18.14",
     "typescript": "^5.1.6"
   }
 }
