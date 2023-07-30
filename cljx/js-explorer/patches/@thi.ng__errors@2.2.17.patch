@@ -1,0 +1,26 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+deleted file mode 100644
+index d0ac26a930d881d1c54156f5fcea586de0db9e72..0000000000000000000000000000000000000000
+diff --git a/assert.js b/assert.js
+index a18371a40526afa53f81902ca77e5133a5d91bf8..40a61c9b8f3413c34a39dcc26d631f532e4364d4 100644
+--- a/assert.js
++++ b/assert.js
+@@ -8,12 +8,15 @@ export const AssertionError = defError(() => "Assertion failed");
+  * The function is only enabled if `process.env.NODE_ENV != "production"` or if
+  * the `UMBRELLA_ASSERTS` or `VITE_UMBRELLA_ASSERTS` env var is set to 1.
+  */
++
++const ximport = {meta: {env: {}}};
++
+ export const assert = (typeof process !== "undefined" && process.env !== undefined
+     ? process.env.NODE_ENV !== "production" ||
+         !!process.env.UMBRELLA_ASSERTS
+-    : import.meta.env
+-        ? import.meta.env.MODE !== "production" ||
+-            !!import.meta.env.VITE_UMBRELLA_ASSERTS
++    : ximport.meta.env
++        ? ximport.meta.env.MODE !== "production" ||
++            !!ximport.meta.env.VITE_UMBRELLA_ASSERTS
+         : true)
+     ? (test, msg) => {
+         if ((typeof test === "function" && !test()) || !test) {

@@ -1,0 +1,17 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+ {:js-explorer {:target           :esm
+                :output-dir       "public/cljs"
+                :js-options       {:js-provider :shadow}
+                :modules          {:main {:init-fn cljs.user/start}}
+                :compiler-options {:output-feature-set :es-next
+                                   :chunk-output-type  :esm}}
+  }}

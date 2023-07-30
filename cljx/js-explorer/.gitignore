@@ -1,0 +1,8 @@
+node_modules
+dist
+
+.shadow-cljs
+.clj-kondo
+.lsp
+
+public/cljs/*
