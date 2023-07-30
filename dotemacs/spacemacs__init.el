@@ -45,6 +45,7 @@ This function should only modify configuration layer settings."
               clojure-indent-style 'align-arguments
               clojure-align-forms-automatically t
               clojure-toplevel-inside-comment-form t
+              cider-edit-jack-in-command t
               )
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -603,7 +604,8 @@ This function is called at the very end of Spacemacs initialization."
  '(package-selected-packages
    '(yaml-mode cargo counsel-gtags dap-mode lsp-docker bui flycheck-rust ggtags racer ron-mode rust-mode toml-mode psc-ide psci purescript-mode sql-indent sqlup-mode tagedit slim-mode scss-mode sass-mode pug-mode impatient-mode helm-css-scss haml-mode counsel-css counsel swiper ivy company-web web-completion-data web-mode typescript-mode import-js grizzl emmet-mode add-node-modules-path org-roam yasnippet-snippets ws-butler writeroom-mode winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org symon symbol-overlay string-inflection string-edit spaceline-all-the-icons smeargle restart-emacs request rainbow-delimiters quickrun popwin pcre2el password-generator paradox overseer orgit-forge org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink open-junk-file nameless mwim multi-line macrostep lsp-ui lsp-treemacs lsp-origami lorem-ipsum link-hint inspector info+ indent-guide hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-git-grep helm-flx helm-descbinds helm-company helm-cider helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitignore-templates git-timemachine git-modes git-messenger git-link fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-terminal-cursor-changer evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu emr elisp-slime-nav elisp-def editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word column-enforce-mode clojure-snippets clean-aindent-mode cider-eval-sexp-fu centered-cursor-mode auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))
  '(safe-local-variable-values
-   '((lsp-file-watch-ignored-directories . "/runtime$")
+   '((cider-clojure-cli-aliases . ":dev:test")
+     (lsp-file-watch-ignored-directories . "/runtime$")
      (cider-jack-in-nrepl-middlewares "cider.nrepl/cider-middleware" "shadow.cljs.devtools.server.nrepl/middleware")
      (cider-clojure-cli-global-options . "-A:dev")
      (clojure-backend quote lsp)
